@@ -1,6 +1,9 @@
 <?php
 
+namespace App\Banque;
 require_once __DIR__ . '/Compte.php';
+
+use \Exception;
 
 
 /**

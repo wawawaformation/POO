@@ -1,19 +1,18 @@
 <?php
+require 'App/Client/Compte.php';
+
+use App\Banque\Compte;
+use App\Client\Compte as CompteClient;
 
 /**
  * Entrée de notre application
  */
 
-require_once 'App/CompteEpargne.php';
+require_once 'App/Banque/Compte.php';
+var_dump(new CompteClient());
 
-try{
-    $epargeEmilia = new CompteEpargne('emilia', 4000);
-    $epargeEmilia->verserInteret();
-    var_dump($epargeEmilia);
-   
-}catch(Exception $e){
-    echo 'Oops, ' . $e->getMessage();
-}
+
+
 
 
 

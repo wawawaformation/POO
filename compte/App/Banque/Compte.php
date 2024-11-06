@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Banque; 
+
+use \Exception;
+
 /**
  * Représente un compte en banque
  */
@@ -13,7 +17,7 @@ class Compte
      * Summary of setSolde
      * @param float $solde
      * @throws \Exception
-     * @return CompteCourant
+     * @return Compte
      */
     protected string $titulaire;
 
@@ -56,7 +60,7 @@ class Compte
 		 //on appelle le setter de solde
 
          if($somme <= 0){
-            throw new Exception('La somme à retirer doit être supérieur à 0');
+            throw new Exception('La somme à retirer doit être supérieur à 0');  
          }
          if($somme > $this->solde){
             throw new Exception('Solde insuffisant');
